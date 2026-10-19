@@ -1,0 +1,80 @@
+{
+  "name": "dsh-right-click-menu",
+  "version": "0.4.0",
+  "description": "Merged right-click menu for the DSH Web GUI: files, chat file paths, workspace projects, and hyperlinks.",
+  "license": "MIT",
+  "author": "Ignareo",
+  "contributors": [
+    {
+      "name": "AL1ghtm3ter",
+      "url": "https://github.com/AL1ghtm3ter"
+    },
+    {
+      "name": "3n (SJcun)",
+      "url": "https://github.com/SJcun"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ignareo/dsh-right-click-menu.git"
+  },
+  "homepage": "https://github.com/Ignareo/dsh-right-click-menu#readme",
+  "bugs": {
+    "url": "https://github.com/Ignareo/dsh-right-click-menu/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "deepseek-harness",
+    "cordis",
+    "context-menu",
+    "right-click",
+    "file-menu",
+    "client-plugin"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "COMPARISON.md",
+    "NOTICE.md",
+    "CHANGELOG.md",
+    "AGENTS.md",
+    "LICENSE",
+    "test/*.test.mjs",
+    "scripts/live-bundle.mjs"
+  ],
+  "scripts": {
+    "test": "node test/detection.test.mjs && node test/host.test.mjs",
+    "check:live": "node scripts/live-bundle.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}

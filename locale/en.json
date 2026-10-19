@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Right-click menu",
+    "description": "Right-click menu for files and links: preview a file in DSH, open it in the default or a chosen associated application, reveal it in the file manager, copy the path, the relative path, the file name or the file contents, save a copy elsewhere, and open a link in the sidebar browser or the system browser."
+  }
+}
